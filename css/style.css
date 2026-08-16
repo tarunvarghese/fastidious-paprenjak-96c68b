@@ -834,3 +834,128 @@ h1 em,h2 em{color:var(--gold-light);font-style:italic}
   }
 
 }
+/* =========================================================
+   SECTION 6 — INSIGHTS
+   ========================================================= */
+
+.insights-section {
+  background: #efe9dd;
+}
+
+.insights-section .section-heading {
+  margin-bottom: 48px;
+}
+
+.insights-section .section-heading h2 em {
+  color: var(--gold);
+}
+
+.insights-section .section-heading > p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.insight-list {
+  border-top: 1px solid var(--line);
+}
+
+.insight-list article {
+  display: grid;
+  grid-template-columns: 190px 1fr auto;
+  column-gap: 30px;
+  align-items: start;
+
+  padding: 30px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.insight-list article > span {
+  padding-top: 6px;
+  color: var(--gold);
+  font-size: 8px;
+  letter-spacing: .17em;
+  font-weight: 800;
+}
+
+.insight-list article h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.insight-list article p {
+  grid-column: 2;
+  margin: 12px 0 0;
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.insight-list article a {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+
+  align-self: center;
+
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.insight-list article a:hover {
+  color: var(--gold);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:760px) {
+
+  .insights-section {
+    padding: 70px 0;
+  }
+
+  .insights-section .section-heading {
+    gap: 22px;
+    margin-bottom: 38px;
+  }
+
+  .insights-section .section-heading h2 {
+    font-size: clamp(40px, 11vw, 58px);
+    line-height: 1.02;
+  }
+
+  .insight-list article {
+    display: block;
+    padding: 28px 0 30px;
+  }
+
+  .insight-list article > span {
+    display: block;
+    margin-bottom: 18px;
+  }
+
+  .insight-list article h3 {
+    font-size: 25px;
+    line-height: 1.15;
+    max-width: 390px;
+  }
+
+  .insight-list article p {
+    margin: 12px 0 20px;
+    font-size: 13px;
+    max-width: 390px;
+  }
+
+  .insight-list article a {
+    display: inline-block;
+    font-size: 10px;
+  }
+
+}
