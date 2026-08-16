@@ -149,7 +149,7 @@ h1 em,h2 em{color:var(--gold-light);font-style:italic}
 .change-section {
   background: var(--paper);
   color: var(--charcoal);
-  padding: 72px 0;
+  padding: 52px 0;
 }
 
 .change-intro {
