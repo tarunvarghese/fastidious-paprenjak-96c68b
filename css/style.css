@@ -730,3 +730,107 @@ h1 em,h2 em{color:var(--gold-light);font-style:italic}
     display: none !important;
   }
 }
+/* =========================================================
+   SECTION 5 — CURRENT WORK
+   ========================================================= */
+
+.work-section {
+  background: var(--paper);
+}
+
+.work-section .section-heading {
+  margin-bottom: 42px;
+}
+
+.work-section .section-heading h2 em {
+  color: var(--gold);
+}
+
+.work-section .section-heading > p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.work-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform .25s ease;
+}
+
+.work-card > span {
+  color: var(--gold);
+}
+
+.work-card h3 {
+  line-height: 1.12;
+}
+
+.work-card p {
+  line-height: 1.65;
+}
+
+.work-card a {
+  display: inline-block;
+}
+
+.work-academy {
+  background: var(--green);
+  color: var(--ivory);
+}
+
+.work-academy p {
+  color: rgba(245,240,231,.62);
+}
+
+.work-feature {
+  background: var(--ivory);
+}
+
+.work-future {
+  background: #efe9dd;
+}
+
+.work-future > span {
+  color: var(--gold);
+}
+
+
+/* Mobile */
+@media(max-width:760px) {
+
+  .work-section {
+    padding: 70px 0;
+  }
+
+  .work-section .section-heading {
+    gap: 22px;
+    margin-bottom: 35px;
+  }
+
+  .work-section .section-heading h2 {
+    font-size: clamp(40px,11vw,58px);
+    line-height: 1.02;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 1px;
+  }
+
+  .work-card {
+    min-height: 300px;
+    padding: 30px 24px;
+  }
+
+  .work-card h3 {
+    font-size: 28px;
+    margin-top: 48px;
+    max-width: 390px;
+  }
+
+  .work-card p {
+    font-size: 14px;
+    max-width: 390px;
+  }
+
+}
