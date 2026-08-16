@@ -527,3 +527,126 @@ h1 em,h2 em{color:var(--gold-light);font-style:italic}
     font-size: 1.05rem;
   }
 }
+/* =========================================================
+   SECTION 1 — HERO
+   FINAL MOBILE-FIRST OVERRIDE
+   ========================================================= */
+
+.hero {
+  background: var(--green);
+  color: var(--ivory);
+  min-height: calc(100vh - 76px);
+  display: block;
+  overflow: hidden;
+}
+
+.hero .hero-grid {
+  display: block;
+  width: min(calc(100% - 28px), var(--max));
+  margin: 0 auto;
+  padding: 72px 0 58px;
+}
+
+.hero .hero-copy {
+  width: 100%;
+  max-width: 760px;
+}
+
+.hero .eyebrow {
+  margin: 0 0 28px;
+  color: var(--gold);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  font-weight: 800;
+}
+
+.hero h1 {
+  margin: 0;
+  max-width: 720px;
+  color: var(--ivory);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.4rem, 15vw, 6rem);
+  font-weight: 400;
+  line-height: 0.94;
+  letter-spacing: -0.045em;
+}
+
+.hero h1 em {
+  color: #d5bb89;
+  font-style: italic;
+}
+
+.hero .hero-text {
+  max-width: 650px;
+  margin: 34px 0 0;
+  color: rgba(245, 240, 231, 0.72);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.hero .hero-actions {
+  display: block;
+  margin-top: 34px;
+}
+
+.hero .button-primary {
+  display: flex;
+  width: 100%;
+  min-height: 62px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  background: var(--gold);
+  color: var(--green);
+  font-size: 0.95rem;
+}
+
+.hero .text-link {
+  display: none;
+}
+
+/* Hide the old decorative visual on mobile */
+.hero .hero-visual {
+  display: none;
+}
+
+
+/* =========================================================
+   HERO — LARGER SCREENS
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+  .hero {
+    display: grid;
+    align-items: center;
+  }
+
+  .hero .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 60px;
+    width: min(calc(100% - 80px), var(--max));
+    padding: 90px 0;
+  }
+
+  .hero .hero-visual {
+    display: block;
+  }
+
+  .hero .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+  }
+
+  .hero .text-link {
+    display: inline-block;
+  }
+
+  .hero .button-primary {
+    display: inline-block;
+    width: auto;
+    min-height: auto;
+  }
+}
