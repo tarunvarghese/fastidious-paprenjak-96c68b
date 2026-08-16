@@ -366,22 +366,28 @@ h1 em,h2 em{color:var(--gold-light);font-style:italic}
    SECTION 4 — HOW WE BUILD
    ========================================================= */
 
+  /* =========================================================
+   SECTION 4 — HOW WE BUILD
+   ========================================================= */
+
 .build-section {
-  background: var(--paper);
-  color: var(--charcoal);
-  padding: 72px 0 76px;
+  background: var(--green, #002d25);
+  color: var(--paper, #f7f3eb);
+  padding: 64px 0 72px;
+  overflow: hidden;
 }
 
 .build-section .container {
-  width: min(100% - 48px, 1180px);
+  width: calc(100% - 48px);
+  max-width: 1180px;
   margin: 0 auto;
 }
 
 /* Section label */
 
 .build-section .section-label {
-  margin-bottom: 30px;
-  color: var(--gold);
+  margin: 0 0 28px;
+  color: var(--gold, #c9a45c);
   font-family: var(--sans);
   font-size: 0.72rem;
   font-weight: 700;
@@ -391,9 +397,10 @@ h1 em,h2 em{color:var(--gold-light);font-style:italic}
 
 /* Main heading */
 
-.build-title {
-  max-width: 720px;
+.build-section .build-title {
+  max-width: 760px;
   margin: 0;
+  color: var(--paper, #f7f3eb);
   font-family: var(--serif);
   font-size: clamp(2.7rem, 10vw, 5.8rem);
   font-weight: 400;
@@ -401,59 +408,71 @@ h1 em,h2 em{color:var(--gold-light);font-style:italic}
   letter-spacing: -0.035em;
 }
 
-.build-title em {
-  color: var(--gold);
+.build-section .build-title em {
+  color: var(--gold, #c9a45c);
   font-style: italic;
 }
 
-/* Intro */
+/* Introduction */
 
-.build-intro {
+.build-section .build-intro {
   max-width: 680px;
-  margin: 32px 0 0;
-  color: var(--muted);
+  margin: 30px 0 0;
+  color: rgba(247, 243, 235, 0.72);
   font-family: var(--sans);
   font-size: 1.08rem;
   line-height: 1.7;
 }
 
-/* Four-part list */
+/* List */
 
-.build-list {
-  margin-top: 52px;
-  border-top: 1px solid rgba(35, 35, 32, 0.16);
+.build-section .build-list {
+  width: 100%;
+  margin-top: 48px;
+  border-top: 1px solid rgba(247, 243, 235, 0.22);
 }
 
 /* Individual item */
 
-.build-item {
-  position: relative;
+.build-section .build-item {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
   padding: 30px 0 34px;
-  border-bottom: 1px solid rgba(35, 35, 32, 0.16);
+  border-bottom: 1px solid rgba(247, 243, 235, 0.22);
 }
 
-.build-number {
+/* Number */
+
+.build-section .build-number {
   display: block;
-  margin-bottom: 20px;
-  color: var(--gold);
+  margin: 0 0 18px;
+  color: var(--gold, #c9a45c);
   font-family: var(--sans);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.16em;
 }
 
-.build-item h3 {
+/* Item heading */
+
+.build-section .build-item h3 {
   margin: 0;
+  color: var(--paper, #f7f3eb);
   font-family: var(--serif);
-  font-size: 2.25rem;
+  font-size: 2.35rem;
   font-weight: 400;
   line-height: 1.05;
 }
 
-.build-item p {
-  max-width: 520px;
+/* Item description */
+
+.build-section .build-item p {
+  display: block;
+  width: 100%;
+  max-width: 540px;
   margin: 14px 0 0;
-  color: var(--muted);
+  color: rgba(247, 243, 235, 0.68);
   font-family: var(--sans);
   font-size: 1rem;
   line-height: 1.65;
@@ -471,38 +490,39 @@ h1 em,h2 em{color:var(--gold-light);font-style:italic}
   }
 
   .build-section .container {
-    width: min(100% - 80px, 1180px);
+    width: calc(100% - 80px);
   }
 
   .build-section .section-label {
     margin-bottom: 40px;
   }
 
-  .build-intro {
+  .build-section .build-intro {
     font-size: 1.2rem;
   }
 
-  .build-list {
-    margin-top: 70px;
+  .build-section .build-list {
+    margin-top: 64px;
   }
 
-  .build-item {
+  .build-section .build-item {
     display: grid;
-    grid-template-columns: 70px 1fr 1fr;
+    grid-template-columns: 70px minmax(200px, 1fr) minmax(250px, 1fr);
     column-gap: 30px;
     align-items: start;
     padding: 38px 0;
   }
 
-  .build-number {
+  .build-section .build-number {
     margin: 5px 0 0;
   }
 
-  .build-item h3 {
+  .build-section .build-item h3 {
     font-size: 3rem;
   }
 
-  .build-item p {
+  .build-section .build-item p {
+    width: auto;
     margin: 4px 0 0;
     font-size: 1.05rem;
   }
