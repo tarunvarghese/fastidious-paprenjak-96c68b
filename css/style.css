@@ -959,3 +959,88 @@ h1 em,h2 em{color:var(--gold-light);font-style:italic}
   }
 
 }
+/* =========================================
+   VARGIZ — FINAL MOBILE QA
+   ========================================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+}
+
+.container {
+  width: min(100% - 32px, var(--max));
+}
+
+/* Prevent grid/flex children from forcing overflow */
+.statement-grid > *,
+.belief-grid > *,
+.future-grid > *,
+.section-heading > *,
+.build-item > *,
+.work-card > *,
+.footer-top > * {
+  min-width: 0;
+}
+
+/* Mobile typography safety */
+@media (max-width: 760px) {
+
+  h1 {
+    max-width: 100%;
+    font-size: clamp(48px, 13vw, 68px);
+    overflow-wrap: break-word;
+  }
+
+  h2 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .hero-inner {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .hero-lead {
+    max-width: 100%;
+  }
+
+  .section {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .section-heading {
+    width: 100%;
+  }
+
+  .build-list,
+  .work-grid,
+  .insight-list {
+    width: 100%;
+  }
+
+  .build-item {
+    width: 100%;
+  }
+
+  .philosophy-inner {
+    width: min(100% - 32px, 900px);
+    margin-inline: auto;
+  }
+
+  .final-cta {
+    width: 100%;
+    overflow: hidden;
+  }
+}
