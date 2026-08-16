@@ -1033,7 +1033,38 @@ iframe {
   .build-item {
     width: 100%;
   }
+@media (max-width: 760px) {
 
+  .section {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .belief-section {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .build-section {
+    padding-top: 64px;
+    padding-bottom: 58px;
+  }
+
+  .philosophy-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .future-section {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .final-cta {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
   .philosophy-inner {
     width: min(100% - 32px, 900px);
     margin-inline: auto;
