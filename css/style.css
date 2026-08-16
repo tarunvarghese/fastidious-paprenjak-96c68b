@@ -141,10 +141,15 @@ h1 em,h2 em{color:var(--gold-light);font-style:italic}
    SECTION 02 — THE CHANGE
    ========================================= */
 
+.  /* =========================================
+   SECTION 02 — THE CHANGE
+   MOBILE REFINEMENT
+   ========================================= */
+
 .change-section {
   background: var(--paper);
   color: var(--charcoal);
-  padding: 90px 0;
+  padding: 72px 0;
 }
 
 .change-intro {
@@ -153,7 +158,7 @@ h1 em,h2 em{color:var(--gold-light);font-style:italic}
 
 .change-intro h2 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(48px, 11vw, 82px);
+  font-size: clamp(45px, 11vw, 72px);
   line-height: 1.02;
   letter-spacing: -0.045em;
   font-weight: 400;
@@ -167,59 +172,59 @@ h1 em,h2 em{color:var(--gold-light);font-style:italic}
 
 .change-lead {
   max-width: 650px;
-  margin: 28px 0 0;
-  font-size: 18px;
+  margin: 25px 0 0;
+  font-size: 17px;
   line-height: 1.55;
   color: var(--muted);
 }
 
+
+/* Ecosystem */
+
 .ecosystem-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  background: var(--line);
-  margin-top: 65px;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 48px;
+  border-top: 1px solid var(--line);
 }
 
 .ecosystem-card {
   background: var(--paper);
-  min-height: 220px;
-  padding: 28px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.25s ease;
-}
-
-.ecosystem-card:hover {
-  transform: translateY(-3px);
+  min-height: 0;
+  padding: 25px 0 28px;
+  border-bottom: 1px solid var(--line);
 }
 
 .ecosystem-number {
+  display: block;
   color: var(--gold);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.18em;
 }
 
 .ecosystem-card h3 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 30px;
+  font-size: 31px;
   line-height: 1.05;
   font-weight: 400;
-  margin: 45px 0 8px;
+  margin: 24px 0 10px;
 }
 
 .ecosystem-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.5;
-  max-width: 260px;
+  max-width: 300px;
 }
 
+
+/* Closing statement */
+
 .change-closing {
-  margin-top: 65px;
+  margin-top: 52px;
   padding-top: 28px;
   border-top: 1px solid var(--line);
   max-width: 850px;
@@ -228,64 +233,35 @@ h1 em,h2 em{color:var(--gold-light);font-style:italic}
 .change-closing p {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(25px, 5vw, 40px);
+  font-size: clamp(26px, 6vw, 40px);
   line-height: 1.2;
   letter-spacing: -0.025em;
 }
 
 
-/* Mobile */
-@media (max-width: 680px) {
+/* Desktop */
+
+@media (min-width: 681px) {
 
   .change-section {
-    padding: 75px 0;
-  }
-
-  .change-intro h2 {
-    font-size: clamp(45px, 12vw, 60px);
-  }
-
-  .change-lead {
-    font-size: 16px;
-    margin-top: 24px;
+    padding: 100px 0;
   }
 
   .ecosystem-grid {
-    grid-template-columns: 1fr;
-    margin-top: 48px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .ecosystem-card {
-    min-height: 190px;
-    padding: 25px 22px;
-  }
-
-  .ecosystem-card h3 {
-    font-size: 28px;
-    margin-top: 38px;
-  }
-
-  .change-closing {
-    margin-top: 48px;
-  }
-
-  .change-closing p {
-    font-size: 28px;
-  }
-}
-
-
-/* Tablet and desktop */
-@media (min-width: 681px) {
-
-  .ecosystem-card {
-    min-height: 250px;
+    padding: 32px;
+    min-height: 220px;
+    border-right: 1px solid var(--line);
   }
 
 }
 
 
-/* Larger desktop */
+/* Large desktop */
+
 @media (min-width: 1000px) {
 
   .ecosystem-grid {
@@ -293,3 +269,4 @@ h1 em,h2 em{color:var(--gold-light);font-style:italic}
   }
 
 }
+  
