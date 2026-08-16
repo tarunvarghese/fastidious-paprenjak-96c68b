@@ -136,3 +136,160 @@ h1 em,h2 em{color:var(--gold-light);font-style:italic}
   .build-item:hover{padding-left:10px;padding-right:10px;background:rgba(255,255,255,.025)}
   .work-card:hover{transform:translateY(-2px)}
 }
+
+/* =========================================
+   SECTION 02 — THE CHANGE
+   ========================================= */
+
+.change-section {
+  background: var(--paper);
+  color: var(--charcoal);
+  padding: 90px 0;
+}
+
+.change-intro {
+  max-width: 850px;
+}
+
+.change-intro h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 11vw, 82px);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.change-intro h2 em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.change-lead {
+  max-width: 650px;
+  margin: 28px 0 0;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line);
+  margin-top: 65px;
+}
+
+.ecosystem-card {
+  background: var(--paper);
+  min-height: 220px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease;
+}
+
+.ecosystem-card:hover {
+  transform: translateY(-3px);
+}
+
+.ecosystem-number {
+  color: var(--gold);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.ecosystem-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  line-height: 1.05;
+  font-weight: 400;
+  margin: 45px 0 8px;
+}
+
+.ecosystem-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  max-width: 260px;
+}
+
+.change-closing {
+  margin-top: 65px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  max-width: 850px;
+}
+
+.change-closing p {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(25px, 5vw, 40px);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+
+/* Mobile */
+@media (max-width: 680px) {
+
+  .change-section {
+    padding: 75px 0;
+  }
+
+  .change-intro h2 {
+    font-size: clamp(45px, 12vw, 60px);
+  }
+
+  .change-lead {
+    font-size: 16px;
+    margin-top: 24px;
+  }
+
+  .ecosystem-grid {
+    grid-template-columns: 1fr;
+    margin-top: 48px;
+  }
+
+  .ecosystem-card {
+    min-height: 190px;
+    padding: 25px 22px;
+  }
+
+  .ecosystem-card h3 {
+    font-size: 28px;
+    margin-top: 38px;
+  }
+
+  .change-closing {
+    margin-top: 48px;
+  }
+
+  .change-closing p {
+    font-size: 28px;
+  }
+}
+
+
+/* Tablet and desktop */
+@media (min-width: 681px) {
+
+  .ecosystem-card {
+    min-height: 250px;
+  }
+
+}
+
+
+/* Larger desktop */
+@media (min-width: 1000px) {
+
+  .ecosystem-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
